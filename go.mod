@@ -1,4 +1,4 @@
-module github.com/KnutZuidema/go-qbittorrent
+module github.com/i0range/go-qbittorrent
 
 go 1.12
 
