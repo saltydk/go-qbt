@@ -10,13 +10,13 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/net/publicsuffix"
 
-	"github.com/KnutZuidema/go-qbittorrent/pkg/application"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/log"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/rss"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/search"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/sync"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/torrent"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/transfer"
+	"github.com/i0range/go-qbittorrent/pkg/application"
+	"github.com/i0range/go-qbittorrent/pkg/log"
+	"github.com/i0range/go-qbittorrent/pkg/rss"
+	"github.com/i0range/go-qbittorrent/pkg/search"
+	"github.com/i0range/go-qbittorrent/pkg/sync"
+	"github.com/i0range/go-qbittorrent/pkg/torrent"
+	"github.com/i0range/go-qbittorrent/pkg/transfer"
 )
 
 type Client struct {
