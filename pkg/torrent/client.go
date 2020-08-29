@@ -10,8 +10,8 @@ import (
 	"github.com/google/go-querystring/query"
 	"github.com/sirupsen/logrus"
 
-	"github.com/KnutZuidema/go-qbittorrent/pkg"
-	"github.com/KnutZuidema/go-qbittorrent/pkg/model"
+	"github.com/i0range/go-qbittorrent/pkg"
+	"github.com/i0range/go-qbittorrent/pkg/model"
 )
 
 type Client struct {

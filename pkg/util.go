@@ -11,7 +11,7 @@ import (
 	"net/textproto"
 	"strings"
 
-	"github.com/KnutZuidema/go-qbittorrent/pkg/model"
+	"github.com/i0range/go-qbittorrent/pkg/model"
 )
 
 func GetInto(client *http.Client, target interface{}, url string, body interface{}) (err error) {
