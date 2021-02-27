@@ -9,8 +9,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/i0range/go-qbittorrent/pkg"
-	"github.com/i0range/go-qbittorrent/pkg/model"
+	"github.com/l3uddz/go-qbt/pkg"
+	"github.com/l3uddz/go-qbt/pkg/model"
 )
 
 type Client struct {
