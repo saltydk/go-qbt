@@ -157,8 +157,8 @@ func (c Client) ReannounceTorrents(hashes []string) error {
 	value := strings.Join(hashes, "|")
 	params := url.Values{}
 	params.Add("hashes", value)
-	endpoint := c.BaseUrl + "/reannounce?" + params.Encode()
-	if err := pkg.Post(c.Client, endpoint, nil); err != nil {
+	if err := pkg.PostWithContentType(c.Client, c.BaseUrl + "/reannounce",
+		strings.NewReader(params.Encode()), "application/x-www-form-urlencoded"); err != nil {
 		return err
 	}
 	return nil
