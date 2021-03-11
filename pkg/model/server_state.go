@@ -3,6 +3,7 @@ package model
 import (
 	"encoding/json"
 	"strconv"
+	"strings"
 )
 
 type ServerState struct {
@@ -27,19 +28,19 @@ func (s *ServerState) UnmarshalJSON(data []byte) error {
 	if err := json.Unmarshal(data, &raw); err != nil {
 		return err
 	}
-	globalRatio, err := strconv.ParseFloat(raw.GlobalRatio, 64)
+	globalRatio, err := strconv.ParseFloat(strings.ReplaceAll(raw.GlobalRatio, ",", ""), 64)
 	if err != nil {
 		return err
 	}
-	readCacheHits, err := strconv.ParseFloat(raw.ReadCacheHits, 64)
+	readCacheHits, err := strconv.ParseFloat(strings.ReplaceAll(raw.ReadCacheHits, ",", ""), 64)
 	if err != nil {
 		return err
 	}
-	readCacheOverload, err := strconv.ParseFloat(raw.ReadCacheOverload, 64)
+	readCacheOverload, err := strconv.ParseFloat(strings.ReplaceAll(raw.ReadCacheOverload, ",", ""), 64)
 	if err != nil {
 		return err
 	}
-	writeCacheOverload, err := strconv.ParseFloat(raw.WriteCacheOverload, 64)
+	writeCacheOverload, err := strconv.ParseFloat(strings.ReplaceAll(raw.WriteCacheOverload, ",", ""), 64)
 	if err != nil {
 		return err
 	}
