@@ -10,13 +10,13 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/net/publicsuffix"
 
-	"github.com/l3uddz/go-qbt/pkg/application"
-	"github.com/l3uddz/go-qbt/pkg/log"
-	"github.com/l3uddz/go-qbt/pkg/rss"
-	"github.com/l3uddz/go-qbt/pkg/search"
-	"github.com/l3uddz/go-qbt/pkg/sync"
-	"github.com/l3uddz/go-qbt/pkg/torrent"
-	"github.com/l3uddz/go-qbt/pkg/transfer"
+	"github.com/saltydk/go-qbt/pkg/application"
+	"github.com/saltydk/go-qbt/pkg/log"
+	"github.com/saltydk/go-qbt/pkg/rss"
+	"github.com/saltydk/go-qbt/pkg/search"
+	"github.com/saltydk/go-qbt/pkg/sync"
+	"github.com/saltydk/go-qbt/pkg/torrent"
+	"github.com/saltydk/go-qbt/pkg/transfer"
 )
 
 type Client struct {

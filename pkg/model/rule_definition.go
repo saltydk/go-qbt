@@ -21,8 +21,8 @@ type RuleDefinition struct {
 	IgnoreDays int `json:"ignoreDays"`
 	// The rule last match time
 	LastMatch string `json:"lastMatch"`
-	// Add matched torrent in paused mode
-	AddPaused bool `json:"addPaused"`
+	// Add matched torrent in stopped mode
+	AddStopped bool `json:"addStopped"`
 	// Assign category to the torrent
 	AssignedCategory string `json:"assignedCategory"`
 	// Save torrent to the given directory

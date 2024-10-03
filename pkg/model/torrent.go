@@ -44,14 +44,14 @@ type Torrent struct {
 type TorrentState string
 
 const (
-	// Some error occurred, applies to paused torrents
+	// Some error occurred, applies to stopped torrents
 	StateError TorrentState = "error"
 	// Torrent data files is missing
 	StateMissingFiles TorrentState = "missingFiles"
 	// Torrent is being seeded and data is being transferred
 	StateUploading TorrentState = "uploading"
-	// Torrent is paused and has finished downloading
-	StatePausedUP TorrentState = "pausedUP"
+	// Torrent is stopped and has finished downloading
+	StateStoppedUP TorrentState = "stoppedUP"
 	// Queuing is enabled and torrent is queued for upload
 	StateQueuedUP TorrentState = "queuedUP"
 	// Torrent is being seeded, but no connection were made
@@ -66,8 +66,8 @@ const (
 	StateDownloading TorrentState = "downloading"
 	// Torrent has just started downloading and is fetching metadata
 	StateMetaDL TorrentState = "metaDL"
-	// Torrent is paused and has NOT finished downloading
-	StatePausedDL TorrentState = "pausedDL"
+	// Torrent is stopped and has NOT finished downloading
+	StateStoppedDL TorrentState = "stoppedDL"
 	// Queuing is enabled and torrent is queued for download
 	StateQueuedDL TorrentState = "queuedDL"
 	// Torrent is being downloaded, but no connection were made

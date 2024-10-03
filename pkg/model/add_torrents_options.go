@@ -9,8 +9,8 @@ type AddTorrentsOptions struct {
 	Category string `json:"category,omitempty"`
 	// Skip hash checking.
 	SkipChecking bool `json:"skip_checking,omitempty"`
-	// Add torrents in the paused state.
-	Paused string `json:"paused,omitempty"`
+	// Add torrents in the stopped state.
+	Stopped string `json:"stopped,omitempty"`
 	// Create the root folder. Possible values are true, false, unset (default)
 	RootFolder string `json:"root_folder,omitempty"`
 	// Rename torrent

@@ -8,8 +8,8 @@ import (
 	"github.com/google/go-querystring/query"
 	"github.com/sirupsen/logrus"
 
-	"github.com/l3uddz/go-qbt/pkg"
-	"github.com/l3uddz/go-qbt/pkg/model"
+	"github.com/saltydk/go-qbt/pkg"
+	"github.com/saltydk/go-qbt/pkg/model"
 )
 
 type Client struct {

@@ -16,7 +16,7 @@ const (
 	FilterAll         TorrentListFilter = "all"
 	FilterDownloading                   = "downloading"
 	FilterCompleted                     = "completed"
-	FilterPaused                        = "paused"
+	FilterStopped                       = "stopped"
 	FilterActive                        = "active"
 	FilterInactive                      = "inactive"
 	FilterResumed                       = "resumed"

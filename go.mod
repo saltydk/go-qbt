@@ -1,9 +1,11 @@
-module github.com/l3uddz/go-qbt
+module github.com/saltydk/go-qbt
 
-go 1.12
+go 1.23
 
 require (
-	github.com/google/go-querystring v1.0.0
-	github.com/sirupsen/logrus v1.4.2
-	golang.org/x/net v0.0.0-20190628185345-da137c7871d7
+	github.com/google/go-querystring v1.1.0
+	github.com/sirupsen/logrus v1.9.3
+	golang.org/x/net v0.29.0
 )
+
+require golang.org/x/sys v0.25.0 // indirect

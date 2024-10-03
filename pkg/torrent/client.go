@@ -10,8 +10,8 @@ import (
 	"github.com/google/go-querystring/query"
 	"github.com/sirupsen/logrus"
 
-	"github.com/l3uddz/go-qbt/pkg"
-	"github.com/l3uddz/go-qbt/pkg/model"
+	"github.com/saltydk/go-qbt/pkg"
+	"github.com/saltydk/go-qbt/pkg/model"
 )
 
 type Client struct {
@@ -112,7 +112,7 @@ func (c Client) StopTorrents(hashes []string) error {
 	value := strings.Join(hashes, "|")
 	params := url.Values{}
 	params.Add("hashes", value)
-	if err := pkg.PostWithContentType(c.Client, c.BaseUrl + "/pause",
+	if err := pkg.PostWithContentType(c.Client, c.BaseUrl+"/stop",
 		strings.NewReader(params.Encode()), "application/x-www-form-urlencoded"); err != nil {
 		return err
 	}
@@ -123,7 +123,7 @@ func (c Client) ResumeTorrents(hashes []string) error {
 	value := strings.Join(hashes, "|")
 	params := url.Values{}
 	params.Add("hashes", value)
-	if err := pkg.PostWithContentType(c.Client, c.BaseUrl + "/resume",
+	if err := pkg.PostWithContentType(c.Client, c.BaseUrl+"/start",
 		strings.NewReader(params.Encode()), "application/x-www-form-urlencoded"); err != nil {
 		return err
 	}
@@ -135,7 +135,7 @@ func (c Client) DeleteTorrents(hashes []string, deleteFiles bool) error {
 	params := url.Values{}
 	params.Add("hashes", value)
 	params.Add("deleteFiles", fmt.Sprintf("%v", deleteFiles))
-	if err := pkg.PostWithContentType(c.Client, c.BaseUrl + "/delete",
+	if err := pkg.PostWithContentType(c.Client, c.BaseUrl+"/delete",
 		strings.NewReader(params.Encode()), "application/x-www-form-urlencoded"); err != nil {
 		return err
 	}
@@ -157,7 +157,7 @@ func (c Client) ReannounceTorrents(hashes []string) error {
 	value := strings.Join(hashes, "|")
 	params := url.Values{}
 	params.Add("hashes", value)
-	if err := pkg.PostWithContentType(c.Client, c.BaseUrl + "/reannounce",
+	if err := pkg.PostWithContentType(c.Client, c.BaseUrl+"/reannounce",
 		strings.NewReader(params.Encode()), "application/x-www-form-urlencoded"); err != nil {
 		return err
 	}
