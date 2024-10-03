@@ -17,6 +17,7 @@ const (
 	FilterDownloading                   = "downloading"
 	FilterCompleted                     = "completed"
 	FilterStopped                       = "stopped"
+	FilterPaused                        = "paused"
 	FilterActive                        = "active"
 	FilterInactive                      = "inactive"
 	FilterResumed                       = "resumed"

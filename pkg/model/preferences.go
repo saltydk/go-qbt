@@ -7,6 +7,8 @@ type Preferences struct {
 	CreateSubfolderEnabled bool `json:"create_subfolder_enabled"`
 	// True if torrents should be added in a Stopped state
 	StartStoppedEnabled bool `json:"start_stopped_enabled"`
+	// True if torrents should be added in a Pausd state
+	StartPausedEnabled bool `json:"start_paused_enabled"`
 	// No documentation provided
 	AutoDeleteMode int `json:"auto_delete_mode"`
 	// True if disk space should be pre-allocated for all files
@@ -209,5 +211,6 @@ type MaxRatioAction int
 
 const (
 	ActionStop   MaxRatioAction = 0
+	ActionPause  MaxRatioAction = 0
 	ActionRemove                = 1
 )

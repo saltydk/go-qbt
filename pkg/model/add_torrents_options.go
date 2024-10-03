@@ -11,6 +11,8 @@ type AddTorrentsOptions struct {
 	SkipChecking bool `json:"skip_checking,omitempty"`
 	// Add torrents in the stopped state.
 	Stopped string `json:"stopped,omitempty"`
+	// Add torrents in the paused state.
+	Paused string `json:"paused,omitempty"`
 	// Create the root folder. Possible values are true, false, unset (default)
 	RootFolder string `json:"root_folder,omitempty"`
 	// Rename torrent

@@ -23,6 +23,8 @@ type RuleDefinition struct {
 	LastMatch string `json:"lastMatch"`
 	// Add matched torrent in stopped mode
 	AddStopped bool `json:"addStopped"`
+	// Add matched torrent in paused mode
+	AddPaused bool `json:"addPaused"`
 	// Assign category to the torrent
 	AssignedCategory string `json:"assignedCategory"`
 	// Save torrent to the given directory
